@@ -29,11 +29,9 @@
             border: none;
             cursor: pointer;
         }
-
         button:hover {
             background-color: #45a049;
         }
-
         #result {
             font-size: 20px;
             font-weight: bold;
@@ -43,42 +41,11 @@
     </style>
 </head>
 <body>
-
 <h2>Grade Calculator</h2>
 <p>Enter student marks (between 0 and 100):</p>
 <input type="number" id="marksInput" min="0" max="100">
 <button onclick="calculateGrade()">Calculate Grade</button>
 <div id="result"></div>
-
-<script>
-    function calculateGrade() {
-        // Get the input value
-        var marks = parseFloat(document.getElementById("marksInput").value);
-
-        // Check if the input is a valid number
-        if (isNaN(marks)) {
-            alert("Please enter a valid number.");
-            return;
-        }
-
-        // Determine the grade based on the input
-        var grade;
-        if (marks > 79) {
-            grade = 'A';
-        } else if (marks >= 60 && marks <= 79) {
-            grade = 'B';
-        } else if (marks >= 50 && marks <= 59) {
-            grade = 'C';
-        } else if (marks >= 40 && marks <= 49) {
-            grade = 'D';
-        } else {
-            grade = 'E';
-        }
-
-        // Display the result
-        document.getElementById("result").innerHTML = 'Grade: ' + grade;
-    }
-</script>
-
+<script src="edit.js"></script>
 </body>
 </html>
